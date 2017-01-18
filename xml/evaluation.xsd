@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:complexType name="Evaluation_t">
+		<xsd:sequence>
+			<xsd:element type="xsd:int" name="note"/>
+			<xsd:element type="xsd:string" name="commentaire_technique" />
+			<xsd:element type="xsd:string" name="commentaire_communication" />
+			<xsd:element type="xsd:string" name="commentaire_integration" />
+		</xsd:sequence>
+		<xsd:attribute type="xsd:int" name="id" use="required"/>
+	</xsd:complexType>
+	
+</xsd:schema>

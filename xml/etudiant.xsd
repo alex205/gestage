@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+	<xsd:complexType name="Etudiant_t">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="nom"/>
+			<xsd:element type="xsd:string" name="prenom"/>
+			<xsd:element type="xsd:date" name="date_naissance"/>
+		</xsd:sequence>
+		<xsd:attribute  name="num_etudiant" type="xsd:int" use="required" />
+		<xsd:attribute  name="id_etablissement" type="xsd:int" use="required" />
+		<!--xsd:attribute  name="id_po" type="xsd:int" use="required" /-->
+	</xsd:complexType>
+	
+	
+</xsd:schema>

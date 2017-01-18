@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:complexType name="Personne_t">
+		<xsd:sequence>
+			<xsd:choice>
+			    <xsd:element name="enseignant" type="Enseignant_t" />
+			    <xsd:element name="encadrant" type="Encadrant_t" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute type="xsd:int" name="id" use="required"/>
+	</xsd:complexType>
+		
+	<xsd:complexType name="Encadrant_t">
+		<xsd:sequence>
+			<xsd:choice>
+			    <xsd:element name="industriel" type="Industriel_t" />
+			    <xsd:element name="chercheur" type="Chercheur_t" />
+			</xsd:choice>
+		</xsd:sequence>
+        <xsd:attribute type="xsd:int" name="id_etablissement" use="required"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="Enseignant_t">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="nom"/>
+			<xsd:element type="xsd:string" name="prenom"/>
+			<xsd:element type="xsd:string" name="fonction"/>
+			<xsd:element type="xsd:string" name="mail"/>
+			<xsd:element type="xsd:int" name="telephone"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	
+	<xsd:complexType name="Industriel_t">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="nom"/>
+			<xsd:element type="xsd:string" name="prenom"/>
+			<xsd:element type="xsd:string" name="fonction"/>
+			<xsd:element type="xsd:string" name="mail"/>
+			<xsd:element type="xsd:int" name="telephone"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="Chercheur_t">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="nom"/>
+			<xsd:element type="xsd:string" name="prenom"/>
+			<xsd:element type="xsd:string" name="fonction"/>
+			<xsd:element type="xsd:string" name="mail"/>
+			<xsd:element type="xsd:int" name="telephone"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	
+
+	
+</xsd:schema>
+
+
+
+
+	<!--
+			<xsd:choice>
+			    <xsd:element name="enseignant" type="Enseignant_t" />
+			    <xsd:element name="encadrant" type="Encadrant_t" />
+			</xsd:choice>
+							-->
+							
+							
+	<!--xsd:complexType name="Etablissement_t">
+		<xsd:sequence>
+			<xsd:choice>
+			    <xsd:element name="laboratoire" type="Labo_t" />
+			    <xsd:element name="entreprise" type="Entreprise_t" />
+			</xsd:choice>
+		</xsd:sequence>
+		 <xsd:attribute name="id" type="xsd:int" use="required" />
+	</xsd:complexType-->

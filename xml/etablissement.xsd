@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:complexType name="Etablissement_t">
+		<xsd:sequence>
+			<xsd:choice>
+			    <xsd:element name="laboratoire" type="Labo_t" />
+			    <xsd:element name="entreprise" type="Entreprise_t" />
+			</xsd:choice>
+		</xsd:sequence>
+		 <xsd:attribute name="id" type="xsd:int" use="required" />
+	</xsd:complexType>
+
+	
+	<xsd:complexType name="Labo_t">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="nom"/>
+			<xsd:element type="Adresse_t" name="adresse"/>
+			<xsd:element type="xsd:string" name="unite"/>
+		</xsd:sequence>
+	</xsd:complexType>
+		
+	<xsd:complexType name="Entreprise_t">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="nom"/>
+			<xsd:element type="Adresse_t" name="adresse"/>
+			<xsd:element type="xsd:string" name="siret"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	
+		
+	<xsd:complexType name="Adresse_t">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="rue" />
+			<xsd:element type="xsd:string" name="ville" />
+			<xsd:element type="xsd:int" name="cp" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>

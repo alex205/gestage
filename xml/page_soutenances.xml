@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="page_soutenances.xslt" type="text/xsl"?>
+<base>
+<!-- ************************************************************************************ -->
+<!-- ***********************************Etablissement************************************ -->
+<!-- ************************************************************************************ -->
+    <etablissements>
+    <!--Laboratoires-->
+    
+    <etablissement id="1">
+    <laboratoire>
+        <nom>CNRS</nom>
+        <adresse>
+            <rue>7 Avenue du Colonel Roche</rue>
+            <ville>Toulouse</ville>
+            <cp>31400</cp>
+        </adresse>
+        <unite>LAAS</unite>
+    </laboratoire>
+    </etablissement>
+
+    <etablissement id="2">
+    <laboratoire>
+        <nom>CNRS</nom>
+        <adresse>
+            <rue>Universite Paul Sabatier</rue>
+            <ville>Toulouse</ville>
+            <cp>31400</cp>
+        </adresse>
+        <unite>IRIT</unite>
+    </laboratoire>
+    </etablissement>
+        
+    <!--Entreprises-->
+    <etablissement id="3">
+    <entreprise>
+        <nom>Airbus</nom>
+        <adresse>
+            <rue>316 rte Bayonne</rue>
+            <ville>Toulouse</ville>
+            <cp>31300</cp>
+        </adresse>
+        <siret>12344</siret>
+    </entreprise>
+    </etablissement>
+    
+    <etablissement id="4">
+    <entreprise>
+        <nom>Crédit Agricole</nom>
+        <adresse>
+            <rue>4 avenue du Pré Félin</rue>
+            <ville>Annecy</ville>
+            <cp>74985</cp>
+        </adresse>
+        <siret>302958491</siret>
+    </entreprise>
+    </etablissement>
+    
+   </etablissements>
+   
+<!-- ************************************************************************************ -->
+<!-- ***********************************Etudiant************************************ -->
+<!-- ************************************************************************************ -->   
+   
+   <etudiants>
+   
+   <etudiant num_etudiant="3200533" id_etablissement="4">
+    <nom>Girardi</nom>
+    <prenom>Alexis</prenom>
+    <date_naissance>1994-01-07</date_naissance>
+   </etudiant>
+   
+   <etudiant num_etudiant="3200269" id_etablissement="3">
+    <nom>Cichocki</nom>
+    <prenom>Guilhem</prenom>
+    <date_naissance>1994-02-11</date_naissance>
+   </etudiant>
+
+   <etudiant num_etudiant="3200126" id_etablissement="1">
+    <nom>Artigouha</nom>
+    <prenom>Noémy</prenom>
+    <date_naissance>1995-02-26</date_naissance>
+   </etudiant>
+   
+   </etudiants>
+   
+<!-- ************************************************************************************ -->
+<!-- ***********************************PO*********************************************** -->
+<!-- ************************************************************************************ -->   
+   
+   <pos>
+    <!--PO 2eme et 3eme annee-->
+    <po id="1">
+        <intitule>IC</intitule>
+        <departement>STPI</departement>
+    </po>
+    <po id="2">
+        <intitule>IMACS</intitule>
+        <departement>STPI</departement>
+    </po>
+    <po id="3">
+        <intitule>MIC</intitule>
+        <departement>STPI</departement>
+    </po>
+    <po id="4">
+        <intitule>ICBE</intitule>
+        <departement>STPI</departement>
+    </po>
+    <!--PO 4eme annee-->
+    <po id="5">
+        <intitule>AE</intitule>
+        <departement>GEI</departement>
+    </po>
+    <po id="6">
+        <intitule>GB</intitule>
+        <departement>GPE</departement>
+    </po>
+    <po id="7">
+        <intitule>GC</intitule>
+        <departement>GC</departement>
+    </po>
+    <po id="8">
+        <intitule>GPE</intitule>
+        <departement>GPE</departement>
+    </po>
+    <po id="9">
+        <intitule>GM</intitule>
+        <departement>GM</departement>
+    </po>
+    <po id="10">
+        <intitule>GP</intitule>
+        <departement>GP</departement>
+    </po>
+    <po id="11">
+        <intitule>IR</intitule>
+        <departement>GEI</departement>
+    </po>
+    </pos>
+
+<!-- ************************************************************************************ -->
+<!-- ***********************************Stages******************************************* -->
+<!-- ************************************************************************************ -->
+    
+    <stages>
+ 
+     <stage id="1" id_etudiant="3200533" id_po="11" id_tuteur="1" id_evaluation="1" id_rapport="3">
+        <intitule>Modéliser une boulangerie antique</intitule>
+        <duree>4</duree>
+        <annee>2016</annee>
+        <encadrant id_encadrant="1"/>
+        <encadrant id_encadrant="4"/>
+        <listeMotsClefs>
+            <motClef>Modéliser</motClef>
+            <motClef>Boulangerie</motClef>
+            <motClef>Blender</motClef>
+        </listeMotsClefs>
+     </stage>
+     
+     <stage id="2" id_etudiant="3200269" id_po="11" id_tuteur="4" id_evaluation="3" id_rapport="1" id_soutenance="1">
+        <intitule>Faire un MEUPORG</intitule>
+        <duree>4</duree>
+        <annee>2016</annee>
+        <encadrant id_encadrant="1"/>
+        <encadrant id_encadrant="4"/>
+        <encadrant id_encadrant="3"/>
+        <listeMotsClefs>
+            <motClef>MEUPORG</motClef>
+            <motClef>WoW</motClef>
+            <motClef>Horde</motClef>
+        </listeMotsClefs>
+     </stage>
+     
+     <stage id="3" id_etudiant="3200269" id_po="11" id_tuteur="6" id_evaluation="3" id_rapport="2" id_soutenance="2">
+        <intitule>Faire du jambon un matin de noël en Autriche</intitule>
+        <duree>2</duree>
+        <annee>2016</annee>
+        <encadrant id_encadrant="1"/>
+        <listeMotsClefs>
+            <motClef>Autriche</motClef>
+            <motClef>Jambon</motClef>
+            <motClef>Noël</motClef>
+        </listeMotsClefs>
+     </stage>
+     
+    </stages>
+ 
+<!-- ************************************************************************************ -->
+<!-- ***********************************Personnes************************************ -->
+<!-- ************************************************************************************ --> 
+    
+    <personnes>
+    
+     <personne id="1">
+     	<encadrant id_etablissement="3">
+     		<industriel>
+     			<nom>Assain</nom>
+     			<prenom>Marc</prenom>
+     			<fonction>CEO Platinium Ceramic</fonction>
+     			<mail>contact@marc.fr</mail>
+     			<telephone>0635353535</telephone>
+     		</industriel>
+     	</encadrant>
+	 </personne>
+	 
+	 <personne id="2">
+     	<encadrant id_etablissement="4">
+     		<industriel>
+     			<nom>Bonno</nom>
+     			<prenom>Jean</prenom>
+     			<fonction>CEO Titanium Ceramic</fonction>
+     			<mail>contact@jean.fr</mail>
+     			<telephone>0635453535</telephone>
+     		</industriel>
+     	</encadrant>
+	 </personne>
+	 
+	 <personne id="3">
+     	<encadrant id_etablissement="2">
+     		<chercheur>
+     			<nom>Alata</nom>
+     			<prenom>Eric</prenom>
+     			<fonction>Chercheur en sécurité des logiciels</fonction>
+     			<mail>alata@laas.fr</mail>
+     			<telephone>0635443535</telephone>
+     		</chercheur>
+     	</encadrant>
+	 </personne>
+	 
+	 <personne id="4">
+     	<encadrant id_etablissement="2">
+     		<chercheur>
+     			<nom>Nicomette</nom>
+     			<prenom>Vincent</prenom>
+     			<fonction>Chercheur en sécurité des réseaux</fonction>
+     			<mail>nicomette@laas.fr</mail>
+     			<telephone>0635447895</telephone>
+     		</chercheur>
+     	</encadrant>
+	 </personne>
+	 
+	 <personne id="5">
+     	<enseignant>
+     		<nom>Esquirol</nom>
+     		<prenom>Patrick</prenom>
+     		<fonction>Logique</fonction>
+     		<mail>esquirol@laas.fr</mail>
+     		<telephone>0612367895</telephone>
+     	</enseignant>
+	 </personne>
+	 
+	 <personne id="6">
+     	<enseignant>
+     		<nom>Jozefowiez</nom>
+     		<prenom>Nicolas</prenom>
+     		<fonction>Advanced Algorithm</fonction>
+     		<mail>jozefowiez@laas.fr</mail>
+     		<telephone>0635767895</telephone>
+     	</enseignant>
+	 </personne>
+	 
+    </personnes>
+    
+<!-- ************************************************************************************ -->
+<!-- ***********************************Evaluations************************************ -->
+<!-- ************************************************************************************ -->    
+    
+	<evaluations>
+	
+	 <evaluation id="1">
+	 	<note>11</note>
+	 	<commentaire_technique>Techniquement faiblard</commentaire_technique>
+	 	<commentaire_communication>Très bonne communication</commentaire_communication>
+	 	<commentaire_integration>Moyen</commentaire_integration>
+	 </evaluation>
+	 
+	 <evaluation id="2">
+	 	<note>16</note>
+	 	<commentaire_technique>Superbe technique</commentaire_technique>
+	 	<commentaire_communication>Très bonne communication</commentaire_communication>
+	 	<commentaire_integration>Bien</commentaire_integration>
+	 </evaluation>
+	 
+	 <evaluation id="3">
+	 	<note>20</note>
+	 	<commentaire_technique>Parfait</commentaire_technique>
+	 	<commentaire_communication>Parfait</commentaire_communication>
+	 	<commentaire_integration>Parfait</commentaire_integration>
+	 </evaluation>
+	
+	</evaluations>    
+    
+    
+<!-- ************************************************************************************ -->
+<!-- ***********************************Rapports************************************ -->
+<!-- ************************************************************************************ -->   
+
+	<rapports>
+	
+	 <rapport id="1">
+	 	<intitule>Le MMORPG dans un environnement favorable au FTP</intitule>
+	 	<note>12</note>
+	 	<enseignant id_enseignant="5"/>
+	 	<enseignant id_enseignant="6"/>
+	 </rapport>
+	 
+	 <rapport id="2">
+	 	<intitule>Le jambon de noël autrichien</intitule>
+	 	<note>20</note>
+	 	<enseignant id_enseignant="6"/>
+	 </rapport>
+	 
+	 <rapport id="3">
+	 	<intitule>les boulangeries romaines</intitule>
+	 	<note>9</note>
+	 	<enseignant id_enseignant="5"/>
+	 </rapport>
+	 
+	</rapports>
+
+<!-- ************************************************************************************ -->
+<!-- ***********************************Soutenances************************************ -->
+<!-- ************************************************************************************ -->   
+
+	<soutenances>
+	
+	 <soutenance id="1">
+	 	<date>2016-02-01</date>
+	 	<lieu>INSA</lieu>
+	 	<note_soutenance>12</note_soutenance>
+	 	<note_rapport>15</note_rapport>
+	 	<jury id_jury="1"/>
+	 	<jury id_jury="3"/>
+	 	<jury id_jury="4"/>
+	 	<jury id_jury="5"/>
+	 	<jury id_jury="6"/>
+	 </soutenance>
+	 
+	 <soutenance id="2">
+	 	<date>2016-02-09</date>
+	 	<lieu>INSA</lieu>
+	 	<note_soutenance>15</note_soutenance>
+	 	<note_rapport>16</note_rapport>
+	 	<jury id_jury="1"/>
+	 	<jury id_jury="6"/>
+	 	<jury id_jury="3"/>
+	 </soutenance>
+	 
+	</soutenances>
+
+
+
+
+
+
+ 
+</base>

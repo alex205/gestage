@@ -1,0 +1,105 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gestage</title>
+<link href="../bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet"></link>
+
+<link rel="stylesheet" media="screen" href="../stage.css" type="text/css"/>
+<link rel="icon" type="images/png" href="../images/favicon.png" />
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="../bootstrap-3.3.2-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../bootstrap-3.3.2-dist/js/npm.js"></script>
+</head>
+<body id="quicksand">
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="accueil.html">
+                       <img src="../images/logo.png" id="logo"/> Bienvenue!
+                    </a>
+                </li>
+                <li>
+                    <a href="accueil.html"><i class="glyphicon glyphicon-menu-hamburger"></i> Accueil</a>
+                </li>
+
+                <li>
+                    <a href="page_etablissements.xml"><i class="glyphicon glyphicon-home"></i> Etablissements</a>
+                </li>
+                <li>
+                    <a href="page_etudiants.xml"><i class="glyphicon glyphicon-education"></i> Etudiants</a>
+                </li>
+                <li>
+                    <a href="page_pos.xml"><i class="glyphicon glyphicon-apple"></i> PO</a>
+                </li>
+                <li>
+                    <a href="page_stages.xml"><i class="glyphicon glyphicon-briefcase"></i> Stages</a>
+                </li>
+                <li>
+                    <a href="page_personnes.xml"><i class="glyphicon glyphicon-user"></i> Encadrants, enseignants</a>
+                </li>
+                <li>
+                    <a href="page_evaluations.xml"><i class="glyphicon glyphicon-file"></i> Evaluations</a>
+                </li>
+                <li>
+                    <a href="page_rapports.xml"><i class="glyphicon glyphicon-duplicate"></i> Rapports</a>
+                </li>
+                <li>
+                    <a href="page_soutenances.xml"><i class="glyphicon glyphicon-comment"></i> Soutenances</a>
+                </li>
+                <li>
+                    <a href="about.html"><i class="glyphicon glyphicon-cog"></i> About</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-1" ><a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a></div>
+                    <div class="col-lg-offset-1 col-lg-8" >
+                        <div class="jumbotron">
+                            <h1>Bienvenue sur <b>Gestage</b> !</h1><br/>
+                            <p class="lead">Ce site vous permettra de consulter la base de données et des étudiants, stages, etc.
+                            </p>
+                            <p class="lead"></p>
+                            
+                        </div>
+                        <img src="../images/insa.jpg"/>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+        
+        
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:include schemaLocation="etablissement.xsd"/>
+<xsd:include schemaLocation="etudiant.xsd"/>
+<xsd:include schemaLocation="PO.xsd"/>
+<xsd:include schemaLocation="stage.xsd"/>
+<xsd:include schemaLocation="personne.xsd"/>
+<xsd:include schemaLocation="evaluation.xsd"/>
+<xsd:include schemaLocation="rapport.xsd"/>
+<xsd:include schemaLocation="soutenance.xsd"/>
+
+
+
+
+
+
+ <xsd:element name="base">
+    <xsd:complexType>
+        <xsd:sequence>
+        
+        
+        
+            <xsd:element name="etablissements">
+		        <xsd:complexType>
+			         <xsd:sequence>
+			         			<xsd:element type="Etablissement_t" name="etablissement" minOccurs="0" maxOccurs="unbounded" />
+
+                    </xsd:sequence>
+               
+		        </xsd:complexType>
+            </xsd:element>
+            
+             <xsd:element name="etudiants">
+		        <xsd:complexType>
+			         <xsd:sequence>
+			         			<xsd:element type="Etudiant_t" name="etudiant" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+               
+		        </xsd:complexType>
+            </xsd:element>
+            
+            <xsd:element name="pos">
+		        <xsd:complexType>
+			         <xsd:sequence>
+			         			<xsd:element type="PO_t" name="po" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+               
+		        </xsd:complexType>
+            </xsd:element>
+            
+            
+             <xsd:element name="stages">
+		        <xsd:complexType>
+			         <xsd:sequence>
+			         			<xsd:element type="Stage_t" name="stage" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+		        </xsd:complexType>
+            </xsd:element>
+            
+            <xsd:element name="personnes">
+		        <xsd:complexType>
+			         <xsd:sequence>
+			         			<xsd:element type="Personne_t" name="personne" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+		        </xsd:complexType>
+            </xsd:element>
+            
+            <xsd:element name="evaluations">
+		        <xsd:complexType>
+			         <xsd:sequence>
+			         			<xsd:element type="Evaluation_t" name="evaluation" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+		        </xsd:complexType>
+            </xsd:element>
+            
+            <xsd:element name="rapports">
+		        <xsd:complexType>
+			         <xsd:sequence>
+			         			<xsd:element type="Rapport_t" name="rapport" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+		        </xsd:complexType>
+            </xsd:element>
+            
+            <xsd:element name="soutenances">
+		        <xsd:complexType>
+			         <xsd:sequence>
+			         			<xsd:element type="Soutenance_t" name="soutenance" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+		        </xsd:complexType>
+            </xsd:element>
+            
+
+         </xsd:sequence>
+     </xsd:complexType>
+     
+     
+     
+     <!-- CLEFS -->
+    <xsd:key name="keyEtablissement">
+        <xsd:selector xpath="./etablissements/etablissement"/>
+        <xsd:field xpath="@id"/>
+    </xsd:key>
+    
+    <xsd:key name="keyPO">
+        <xsd:selector xpath="./pos/po"/>
+        <xsd:field xpath="@id"/>
+    </xsd:key>
+    
+    <xsd:key name="keyEtudiant">
+        <xsd:selector xpath="./etudiants/etudiant"/>
+        <xsd:field xpath="@num_etudiant"/>
+    </xsd:key>
+    
+    <xsd:key name="keyPersonne">
+        <xsd:selector xpath="./personnes/personne"/>
+        <xsd:field xpath="@id"/>
+    </xsd:key>
+    
+    
+    <xsd:key name="keyEvaluation">
+        <xsd:selector xpath="./evaluations/evaluation"/>
+        <xsd:field xpath="@id"/>
+    </xsd:key>    
+    
+    <xsd:key name="keyRapport">
+        <xsd:selector xpath="./rapports/rapport"/>
+        <xsd:field xpath="@id"/>
+    </xsd:key>
+    
+    <xsd:key name="keySoutenance">
+        <xsd:selector xpath="./soutenances/soutenance"/>
+        <xsd:field xpath="@id"/>
+    </xsd:key>
+     
+    
+    
+    <!-- REFERENCE DE CLEFS -->
+    <xsd:keyref name="etablissement_etudiant" refer="keyEtablissement">
+    	<xsd:selector xpath="./etudiants/etudiant"/>
+    	<xsd:field xpath="@id_etablissement"/>
+    </xsd:keyref>
+     
+     <xsd:keyref name="etablissement_encadrant" refer="keyEtablissement">
+    	<xsd:selector xpath="./personnes/personne/encadrant"/>
+    	<xsd:field xpath="@id_etablissement"/>
+    </xsd:keyref>
+    
+    <xsd:keyref name="po_stage" refer="keyPO">
+    	<xsd:selector xpath="./stages/stage"/>
+    	<xsd:field xpath="@id_po"/>
+    </xsd:keyref>
+    
+     <xsd:keyref name="etudiant_stage" refer="keyEtudiant">
+    	<xsd:selector xpath="./stages/stage"/>
+    	<xsd:field xpath="@id_etudiant"/>
+    </xsd:keyref>
+    
+    <xsd:keyref name="tuteur_stage" refer="keyPersonne">
+    	<xsd:selector xpath="./stages/stage"/>
+    	<xsd:field xpath="@id_tuteur"/>
+    </xsd:keyref>
+    
+     <xsd:keyref name="encadrant_stage" refer="keyEvaluation">
+    	<xsd:selector xpath="./stages/stage"/>
+    	<xsd:field xpath="@id_encadrant"/>
+    </xsd:keyref>
+    
+    <xsd:keyref name="evaluation_stage" refer="keyEvaluation">
+    	<xsd:selector xpath="./stages/stage"/>
+    	<xsd:field xpath="@id_evaluation"/>
+    </xsd:keyref>
+    
+    <xsd:keyref name="rapport_stage" refer="keyRapport">
+    	<xsd:selector xpath="./stages/stage"/>
+    	<xsd:field xpath="@id_rapport"/>
+    </xsd:keyref>
+    
+    <xsd:keyref name="enseignant_rapport" refer="keyPersonne">
+    	<xsd:selector xpath="./rapports/rapport"/>
+    	<xsd:field xpath="@id_enseignant"/>
+    </xsd:keyref>
+    
+    <xsd:keyref name="soutenance_stage" refer="keySoutenance">
+    	<xsd:selector xpath="./stages/stage"/>
+    	<xsd:field xpath="@id_soutenance"/>
+    </xsd:keyref>
+    
+    <xsd:keyref name="jury_soutenance" refer="keyPersonne">
+    	<xsd:selector xpath="./soutenances/soutenance"/>
+    	<xsd:field xpath="@id_soutenance"/>
+    </xsd:keyref>
+     
+     
+ </xsd:element>
+ 
+ 
+</xsd:schema>

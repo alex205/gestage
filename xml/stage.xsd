@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:complexType name="Stage_t">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="intitule"/>
+			<xsd:element type="xsd:string" name="duree"/>
+			<xsd:element type="xsd:int" name="annee"/>
+			<xsd:element type="Code_encadrant_t" name="encadrant" maxOccurs="unbounded" />
+			<xsd:element type="ListeMotClefs_t" name="listeMotsClefs" />
+		</xsd:sequence>
+		<xsd:attribute type="xsd:int" name="id" use="required"/>
+		<xsd:attribute type="xsd:int" name="id_etudiant" use="required"/>
+		<xsd:attribute type="xsd:int" name="id_po" use="required"/>
+		<xsd:attribute type="xsd:int" name="id_tuteur" use="required"/>
+		<xsd:attribute type="xsd:int" name="id_evaluation" use="required"/>
+		<xsd:attribute type="xsd:int" name="id_rapport" use="required"/>
+		<xsd:attribute type="xsd:int" name="id_soutenance"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ListeMotClefs_t">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" maxOccurs="unbounded" name="motClef" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="Code_encadrant_t">
+		<xsd:attribute type="xsd:int" name="id_encadrant" use="required"/>
+	</xsd:complexType>
+	
+	
+</xsd:schema>

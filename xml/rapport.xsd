@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:complexType name="Rapport_t">
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="intitule" />
+			<xsd:element type="xsd:int" name="note"/>
+			<xsd:element type="Code_enseignant_t" name="enseignant" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute type="xsd:int" name="id"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="Code_enseignant_t">
+		<xsd:attribute type="xsd:int" name="id_enseignant" use="required"/>
+	</xsd:complexType>
+	
+</xsd:schema>

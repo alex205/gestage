@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:complexType name="Soutenance_t">
+		<xsd:sequence>
+			<xsd:element type="xsd:date" name="date"/>
+			<xsd:element type="xsd:string" name="lieu" />
+			<xsd:element type="xsd:int" name="note_soutenance"/>
+			<xsd:element type="xsd:int" name="note_rapport"/>
+			<xsd:element type="Code_jury_t" name="jury" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute type="xsd:int" name="id"/>
+	</xsd:complexType>
+	
+	
+	<xsd:complexType name="Code_jury_t">
+		<xsd:attribute type="xsd:int" name="id_jury" use="required"/>
+	</xsd:complexType>
+	
+
+</xsd:schema>
